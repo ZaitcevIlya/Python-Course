@@ -1,0 +1,5 @@
+Roga_and_Copyta OOO 10000 500000
+Yentax OOO 100000 5000
+Sber AO 10000 50000
+Ivanov IP 10000 2000
+Gas_and_oil AO 1000000 5000
