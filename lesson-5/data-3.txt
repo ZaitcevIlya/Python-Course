@@ -1,0 +1,6 @@
+Ivanov 30000
+Petrov 10000
+Seedorov 15000
+Kalashnikov 20000
+Pushkin 10000
+Dostoevsky 40000
