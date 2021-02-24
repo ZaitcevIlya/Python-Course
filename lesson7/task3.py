@@ -43,7 +43,11 @@ class Cell:
         return Cell(self.quantity * other.quantity)
 
     def __truediv__(self, other):
-        return Cell(self.quantity // other.quantity)
+        try:
+            result = self.quantity // other.quantity
+            return Cell(result)
+        except ZeroDivisionError:
+            return Cell('Error. Division by zero')
 
     def make_order(self, item_per_row):
         string = '*' * self.quantity
@@ -53,14 +57,17 @@ class Cell:
 
 c1 = Cell(12)
 c2 = Cell(15)
+c3 = Cell(0)
 r1 = c1 - c2
 r2 = c2 - c1
 r3 = c1 * c2
 r4 = c2 / c1
+r5 = c2 / c3
 print(r1.quantity)
 print(f'New Cell with quantity = {r2.quantity}')
 print(f'New Cell with quantity = {r3.quantity}')
 print(f'New Cell with quantity = {r4.quantity}')
+print(f'New Cell with quantity = {r5.quantity}')
 print(f'Cell {c1.quantity}:')
 c1.make_order(5)
 print(f'Cell {c2.quantity}:')

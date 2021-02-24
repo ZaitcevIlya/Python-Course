@@ -12,18 +12,7 @@
 from abc import ABC, abstractmethod
 
 
-class ClothesInterface(ABC):
-
-    @abstractmethod
-    def __init__(self):
-        pass
-
-    @abstractmethod
-    def fabric_consumption_calc(self):
-        pass
-
-
-class Clothes(ClothesInterface):
+class Clothes(ABC):
 
     overall_fabric_consumption = 0
 
@@ -31,6 +20,7 @@ class Clothes(ClothesInterface):
         super().__init__()
         self.cl_type = cl_type
 
+    @abstractmethod
     def fabric_consumption_calc(self):
         pass
 
